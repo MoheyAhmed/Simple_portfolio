@@ -86,6 +86,96 @@ $("document").ready(function () {
         cursorborder: "1px solid #9e6c2c"
     });
     
+    $(window).on("scroll", function () {
+
+        // scroll to home
+
+        if ($(window).scrollTop() < 565.5) {
+
+            $(".home_link").addClass("active");
+            $(".about_link").removeClass("active");
+            $(".skills_link").removeClass("active");
+            $(".services_link").removeClass("active");
+            $(".portfolio_link").removeClass("active");
+            $(".testimonials_link").removeClass("active");
+            $(".contact_link").removeClass("active");
+        }
+
+        // scroll to about
+
+        if ($(window).scrollTop() >= 565.5 && $(window).scrollTop() < 1115) {
+
+            $(".about_link").addClass("active");
+            $(".home_link").removeClass("active");
+            $(".skills_link").removeClass("active");
+            $(".services_link").removeClass("active");
+            $(".portfolio_link").removeClass("active");
+            $(".testimonials_link").removeClass("active");
+            $(".contact_link").removeClass("active");
+
+        }
+
+        // scroll to Skills
+
+        if ($(window).scrollTop() >= 1115 && $(window).scrollTop() < 1630) {
+
+            $(".skills_link").addClass("active");
+            $(".home_link").removeClass("active");
+            $(".about_link").removeClass("active");
+            $(".services_link").removeClass("active");
+            $(".portfolio_link").removeClass("active");
+            $(".testimonials_link").removeClass("active");
+            $(".contact_link").removeClass("active");
+        }
+
+        if ($(window).scrollTop() >= 1630 && $(window).scrollTop() < 2480) {
+
+            $(".services_link").addClass("active");
+            $(".home_link").removeClass("active");
+            $(".about_link").removeClass("active");
+            $(".skills_link").removeClass("active");
+            $(".portfolio_link").removeClass("active");
+            $(".testimonials_link").removeClass("active");
+            $(".contact_link").removeClass("active");
+        }
+
+        // scroll to protofolio
+
+        if ($(window).scrollTop() >= 2480 && $(window).scrollTop() < 3150) {
+
+            $(".portfolio_link").addClass("active");
+            $(".home_link").removeClass("active");
+            $(".about_link").removeClass("active");
+            $(".skills_link").removeClass("active");
+            $(".services_link").removeClass("active");
+            $(".testimonials_link").removeClass("active");
+            $(".contact_link").removeClass("active");
+        }
+        
+        // scroll to testimonial
+        if ($(window).scrollTop() >= 3150 && $(window).scrollTop() < 3465) {
+
+            $(".testimonials_link").addClass("active");
+            $(".home_link").removeClass("active");
+            $(".about_link").removeClass("active");
+            $(".skills_link").removeClass("active");
+            $(".services_link").removeClass("active");
+            $(".portfolio_link").removeClass("active");
+            $(".contact_link").removeClass("active");
+        }
+        // scroll to contact
+
+        if ($(window).scrollTop() >= 3465) {
+
+            $(".contact_link").addClass("active");
+            $(".home_link").removeClass("active");
+            $(".about_link").removeClass("active");
+            $(".skills_link").removeClass("active");
+            $(".services_link").removeClass("active");
+            $(".portfolio_link").removeClass("active");
+            $(".testimonials_link").removeClass("active");
+        }
+    });
 
 
     $(".home_link").click(function() {
